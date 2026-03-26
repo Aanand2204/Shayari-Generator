@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shayari | Iconic Expressions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header class="hero">
+            <h1 class="glitch-text" data-text="SHAYARI">SHAYARI</h1>
+            <p class="subtitle">Generate iconic, one-of-a-kind Shayari for any moment.</p>
+        </header>
+
+        <section class="glass-card">
+            <div class="input-group">
+                <label for="language">Shayari Language</label>
+                <div class="select-wrapper">
+                    <select id="language">
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Marathi">Marathi</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="French">French</option>
+                        <option value="German">German</option>
+                        <option value="Italian">Italian</option>
+                        <option value="Portuguese">Portuguese</option>
+                        <option value="Russian">Russian</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Arabic">Arabic</option>
+                        <option value="Bengali">Bengali</option>
+                        <option value="Turkish">Turkish</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="situation">Deep Context / Situation</label>
+                <textarea id="situation" placeholder="Describe the scene in detail... (e.g., 'A king realizing his throne is made of paper', 'Two lovers meeting at the edge of the world')"></textarea>
+            </div>
+
+            <button id="generate-btn" class="epic-btn">
+                <span>GENERATE SHAYARI</span>
+                <div class="btn-glow"></div>
+            </button>
+        </section>
+
+        <section id="result-container" class="glass-card result-card hidden">
+            <p id="dialogue-output" class="dialogue-text"></p>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
